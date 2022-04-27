@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-27 22:24:53
+ * @LastEditTime: 2022-04-27 22:32:25
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from "path";
@@ -16,5 +16,11 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
+  },
+  preview: {
+    port: 3000,
+  },
+  build: {
+    outDir: path.join(__dirname, "dist"),
   },
 });
