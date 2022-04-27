@@ -1,9 +1,16 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+/*
+ * @Author: qianzhi
+ * @Date: 2022-04-22 23:35:58
+ * @LastEditors: qianzhi
+ * @LastEditTime: 2022-04-27 22:40:39
+ * @FilePath: /head-first-vite/src/pages/App.tsx
+ */
+import { useState } from "react";
+import logo from "../assets/logo.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
@@ -27,7 +34,7 @@ function App() {
           >
             Learn React
           </a>
-          {' | '}
+          {" | "}
           <a
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
@@ -39,7 +46,7 @@ function App() {
         </p>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
