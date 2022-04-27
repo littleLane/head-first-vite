@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-27 23:15:13
+ * @LastEditTime: 2022-04-27 23:22:05
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from "path";
@@ -40,7 +40,13 @@ export default defineConfig({
       ],
     },
   },
-  plugins: [react()],
+  plugins: [
+    react({
+      babel: {
+        plugins: ["babel-plugin-styled-components"],
+      },
+    }),
+  ],
   server: {
     port: 3000,
   },
