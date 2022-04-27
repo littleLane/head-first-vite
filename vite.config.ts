@@ -2,13 +2,15 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-27 23:06:10
+ * @LastEditTime: 2022-04-27 23:15:13
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from "path";
 
 import { defineConfig, normalizePath } from "vite";
 import react from "@vitejs/plugin-react";
+
+import autoprefixer from "autoprefixer";
 
 // 全局的 scss 文件路径
 // 用 normalizePath 解决 window 下的路径问题
@@ -28,6 +30,14 @@ export default defineConfig({
         // additionalData 的内容会在每个 scss 文件的开头自动注入
         additionalData: `@import "${variablePath}";`,
       },
+    },
+    postcss: {
+      plugins: [
+        autoprefixer({
+          // 指定目标浏览器
+          overrideBrowserslist: ["Chrome > 40", "ff > 31", "ie 11"],
+        }),
+      ],
     },
   },
   plugins: [react()],
