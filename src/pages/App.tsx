@@ -2,10 +2,11 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-27 22:40:39
+ * @LastEditTime: 2022-04-27 22:54:00
  * @FilePath: /head-first-vite/src/pages/App.tsx
  */
 import { useState } from "react";
+import { Header } from "../components/Header";
 import logo from "../assets/logo.svg";
 import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
