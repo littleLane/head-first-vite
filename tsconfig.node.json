@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    // 允许 node 模块进行 default 默认导入
+    "allowSyntheticDefaultImports": true,
     "composite": true,
     "module": "esnext",
     "moduleResolution": "node"

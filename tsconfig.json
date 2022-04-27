@@ -13,6 +13,8 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    // 1、noEmit 表示只做类型检查，不会输出产物文件
+    // 2、与 tsc --noEmit 等效
     "noEmit": true,
     "jsx": "react-jsx"
   },
