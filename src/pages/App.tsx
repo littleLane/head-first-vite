@@ -2,13 +2,14 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-27 22:54:00
+ * @LastEditTime: 2022-04-27 23:24:06
  * @FilePath: /head-first-vite/src/pages/App.tsx
  */
 import { useState } from "react";
 import { Header } from "../components/Header";
 import logo from "../assets/logo.svg";
 import "./App.css";
+import { Footer } from "../components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -47,6 +48,7 @@ function App() {
           </a>
         </p>
       </header>
+      <Footer />
     </div>
   );
 }
