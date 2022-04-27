@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-27 23:24:06
+ * @LastEditTime: 2022-04-27 23:29:27
  * @FilePath: /head-first-vite/src/pages/App.tsx
  */
 import { useState } from "react";
@@ -10,6 +10,7 @@ import { Header } from "../components/Header";
 import logo from "../assets/logo.svg";
 import "./App.css";
 import { Footer } from "../components/Footer";
+import { StyledComponent } from "../components/StyledComponent";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <StyledComponent />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
