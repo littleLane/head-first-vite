@@ -2,11 +2,12 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-27 22:54:00
+ * @LastEditTime: 2022-04-28 08:54:03
  * @FilePath: /head-first-vite/src/pages/App.tsx
  */
 import { useState } from "react";
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 import logo from "../assets/logo.svg";
 import "./App.css";
 
@@ -47,6 +48,7 @@ function App() {
           </a>
         </p>
       </header>
+      <Footer />
     </div>
   );
 }
