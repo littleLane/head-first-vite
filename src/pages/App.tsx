@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-28 09:54:59
+ * @LastEditTime: 2022-04-28 10:04:11
  * @FilePath: /head-first-vite/src/pages/App.tsx
  */
 import { useState } from "react";
@@ -10,6 +10,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { WindiComponent } from "../components/WindiComponent";
 import { WindiAttributify } from "../components/WindiAttributify";
+import { WindiShortcuts } from "../components/WindiShortcuts";
 import logo from "../assets/logo.svg";
 import "./App.css";
 
@@ -22,6 +23,7 @@ function App() {
       <WindiComponent />
       <WindiAttributify />
       <header className="App-header">
+        <WindiShortcuts />
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
