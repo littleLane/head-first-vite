@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-27 23:15:13
+ * @LastEditTime: 2022-04-28 09:17:26
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from "path";
@@ -40,7 +40,16 @@ export default defineConfig({
       ],
     },
   },
-  plugins: [react()],
+  plugins: [
+    react({
+      babel: {
+        plugins: ["@emotion/babel-plugin"],
+      },
+      // 注意: 对于 emotion，需要单独加上这个配置
+      // 通过 `@emotion/react` 包编译 emotion 中的特殊 jsx 语法
+      jsxImportSource: "@emotion/react",
+    }),
+  ],
   server: {
     port: 3000,
   },
