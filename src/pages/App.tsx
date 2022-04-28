@@ -5,11 +5,11 @@
  * @LastEditTime: 2022-04-28 08:54:03
  * @FilePath: /head-first-vite/src/pages/App.tsx
  */
-import { useState } from "react";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import logo from "../assets/logo.svg";
-import "./App.css";
+import { useState } from 'react';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+import logo from '../assets/logo.svg';
+import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,7 +37,7 @@ function App() {
           >
             Learn React
           </a>
-          {" | "}
+          {' | '}
           <a
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
