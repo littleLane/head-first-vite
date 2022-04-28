@@ -1,0 +1,7 @@
+{
+  // reference: https://stackoverflow.com/questions/47607602/how-to-add-a-tailwind-css-rule-to-css-checker/68350950#68350950
+  "css.validate": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
