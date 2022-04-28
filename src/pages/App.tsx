@@ -2,14 +2,14 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-27 23:29:27
+ * @LastEditTime: 2022-04-28 09:02:17
  * @FilePath: /head-first-vite/src/pages/App.tsx
  */
 import { useState } from "react";
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 import logo from "../assets/logo.svg";
 import "./App.css";
-import { Footer } from "../components/Footer";
 import { StyledComponent } from "../components/StyledComponent";
 
 function App() {
