@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-28 21:35:45
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-28 22:17:27
+ * @LastEditTime: 2022-04-30 09:24:16
  * @FilePath: /head-first-vite/.eslintrc.js
  */
 module.exports = {
@@ -69,7 +69,6 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     // quotes: ['error', 'single'],
     semi: ['error', 'always'],
-    'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/ban-ts-comment': 'error',
     '@typescript-eslint/no-explicit-any': 'warn'
   }
