@@ -8,7 +8,11 @@
     "preview": "vite preview",
     "lint:script": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "lint:style": "stylelint --fix \"src/**/*.{css,scss,less}\"",
-    "lint": "npm run lint:script && npm run lint:style"
+    "lint": "npm run lint:script && npm run lint:style",
+    "postinstall": "husky install"
+  },
+  "husky": {
+    "pre-commit": "npm run lint"
   },
   "dependencies": {
     "react": "^18.0.0",
@@ -26,6 +30,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
     "sass": "^1.51.0",
