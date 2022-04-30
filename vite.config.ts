@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-30 10:03:01
+ * @LastEditTime: 2022-04-30 10:08:48
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -23,6 +23,7 @@ const variablePath = normalizePath(path.resolve('./src/styles/variable.scss'));
 // https://vitejs.dev/config/
 export default defineConfig({
   root: path.join(__dirname, 'src'),
+  json: { stringify: true },
   resolve: {
     alias: {
       '@assets': path.join(__dirname, 'src/assets')
