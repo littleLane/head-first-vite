@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-30 09:46:58
+ * @LastEditTime: 2022-04-30 09:55:34
  * @FilePath: /head-first-vite/src/pages/App.tsx
  */
 import { useState } from 'react';
@@ -22,9 +22,9 @@ function App() {
       <Header />
       <WindiComponent />
       <WindiAttributify />
-      <header className="App-header">
+      <header className="app-header">
         <WindiShortcuts />
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="app-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
