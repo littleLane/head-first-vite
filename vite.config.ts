@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-30 09:40:28
+ * @LastEditTime: 2022-04-30 09:46:12
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -13,6 +13,7 @@ import react from '@vitejs/plugin-react';
 import autoprefixer from 'autoprefixer';
 import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from '@amatlash/vite-plugin-stylelint';
+import windicss from 'vite-plugin-windicss';
 
 // 全局的 scss 文件路径
 // 用 normalizePath 解决 window 下的路径问题
@@ -53,6 +54,7 @@ export default defineConfig({
       exclude: /windicss|node_modules/
     }),
     viteEslint(),
+    windicss(),
     react()
   ],
   server: {

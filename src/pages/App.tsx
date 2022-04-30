@@ -2,12 +2,15 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-30 09:19:04
+ * @LastEditTime: 2022-04-30 09:46:58
  * @FilePath: /head-first-vite/src/pages/App.tsx
  */
 import { useState } from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { WindiComponent } from '../components/WindiComponent';
+import { WindiAttributify } from '../components/WindiAttributify';
+import { WindiShortcuts } from '../components/WindiShortcuts';
 import logo from '../assets/logo.svg';
 import './App.css';
 
@@ -17,8 +20,11 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <header className="app-header">
-        <img src={logo} className="app-logo" alt="logo" />
+      <WindiComponent />
+      <WindiAttributify />
+      <header className="App-header">
+        <WindiShortcuts />
+        <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
