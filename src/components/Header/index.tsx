@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-27 22:52:08
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-30 10:13:53
+ * @LastEditTime: 2022-04-30 10:18:14
  * @FilePath: /head-first-vite/src/components/Header/index.tsx
  */
 import logoSrc from '@assets/logo.svg';
@@ -14,7 +14,7 @@ import React from 'react';
 
 export function Header() {
   React.useEffect(() => {
-    function wokerListener(event: MessageEvent<any>) {
+    function wokerListener(event: MessageEvent<number>) {
       console.log(event);
     }
 

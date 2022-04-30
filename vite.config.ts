@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-30 10:08:48
+ * @LastEditTime: 2022-04-30 10:31:48
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -15,6 +15,7 @@ import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from '@amatlash/vite-plugin-stylelint';
 import windicss from 'vite-plugin-windicss';
 import svgr from 'vite-plugin-svgr';
+import viteImagemin from 'vite-plugin-imagemin';
 
 // 全局的 scss 文件路径
 // 用 normalizePath 解决 window 下的路径问题
@@ -58,7 +59,29 @@ export default defineConfig({
     viteEslint(),
     windicss(),
     svgr(),
-    react()
+    react(),
+    viteImagemin({
+      // 无损压缩配置，无损压缩下图片质量不会变差
+      optipng: {
+        optimizationLevel: 7
+      },
+      // 有损压缩配置，有损压缩下图片质量可能会变差
+      pngquant: {
+        quality: [0.8, 0.9]
+      },
+      // svg 优化
+      svgo: {
+        plugins: [
+          {
+            name: 'removeViewBox'
+          },
+          {
+            name: 'removeEmptyAttrs',
+            active: false
+          }
+        ]
+      }
+    })
   ],
   server: {
     port: 3000
@@ -67,6 +90,7 @@ export default defineConfig({
     port: 3000
   },
   build: {
-    outDir: path.join(__dirname, 'dist')
+    outDir: path.join(__dirname, 'dist'),
+    emptyOutDir: true
   }
 });
