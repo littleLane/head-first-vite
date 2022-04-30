@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-30 09:22:13
+ * @LastEditTime: 2022-04-30 09:40:28
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -21,6 +21,11 @@ const variablePath = normalizePath(path.resolve('./src/styles/variable.scss'));
 // https://vitejs.dev/config/
 export default defineConfig({
   root: path.join(__dirname, 'src'),
+  resolve: {
+    alias: {
+      '@assets': path.join(__dirname, 'src/assets')
+    }
+  },
   css: {
     modules: {
       // 一般我们可以通过 generateScopedName 属性来对生成的类名进行自定义
