@@ -1,4 +1,11 @@
+###
+ # @Author: qianzhi
+ # @Date: 2022-04-30 09:29:03
+ # @LastEditors: qianzhi
+ # @LastEditTime: 2022-04-30 09:32:14
+ # @FilePath: /head-first-vite/.husky/pre-commit
+### 
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint
+npx --no -- lint-staged

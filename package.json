@@ -14,6 +14,16 @@
   "husky": {
     "pre-commit": "npm run lint"
   },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts}": [
+      "npm run lint:script",
+      "git add --force"
+    ],
+    "**/*.{css,scss,less}": [
+      "npm run lint:style",
+      "git add --force"
+    ]
+  },
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
@@ -31,6 +41,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
     "sass": "^1.51.0",
