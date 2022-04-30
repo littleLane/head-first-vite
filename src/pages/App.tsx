@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-28 08:54:03
+ * @LastEditTime: 2022-04-30 09:19:04
  * @FilePath: /head-first-vite/src/pages/App.tsx
  */
 import { useState } from 'react';
@@ -15,10 +15,10 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
+    <div className="app">
       <Header />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="app-header">
+        <img src={logo} className="app-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
@@ -30,7 +30,7 @@ function App() {
         </p>
         <p>
           <a
-            className="App-link"
+            className="app-link"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
@@ -39,7 +39,7 @@ function App() {
           </a>
           {' | '}
           <a
-            className="App-link"
+            className="app-link"
             href="https://vitejs.dev/guide/features.html"
             target="_blank"
             rel="noopener noreferrer"
