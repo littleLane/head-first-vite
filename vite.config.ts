@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-04-30 10:31:48
+ * @LastEditTime: 2022-05-02 09:45:58
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -83,6 +83,17 @@ export default defineConfig({
       }
     })
   ],
+  optimizeDeps: {
+    // 需要预构建的文件配置，支持 String[] 和 glob 语法
+    // entries: ['./src/main.tsx']
+    // 配置为一个字符串数组，将 `lodash-es` 和 `vue`两个包强制进行预构建
+    // include: ['lodash-es', 'vue']
+
+    include: [
+      // 按需加载的依赖都可以声明到这个数组里
+      'object-assign'
+    ]
+  },
   server: {
     port: 3000
   },

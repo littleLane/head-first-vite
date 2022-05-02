@@ -25,6 +25,7 @@
     ]
   },
   "dependencies": {
+    "object-assign": "^4.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -33,6 +34,7 @@
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
     "@types/node": "^17.0.29",
+    "@types/object-assign": "^4.0.30",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
