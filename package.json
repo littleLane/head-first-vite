@@ -9,7 +9,7 @@
     "lint:script": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "lint:style": "stylelint --fix \"src/**/*.{css,scss,less}\"",
     "lint": "npm run lint:script && npm run lint:style",
-    "postinstall": "husky install"
+    "postinstall": "husky install && patch-package"
   },
   "husky": {
     "pre-commit": "npm run lint"
@@ -28,12 +28,14 @@
     "@loadable/component": "^5.15.2",
     "object-assign": "^4.1.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-virtualized": "^9.22.3"
   },
   "devDependencies": {
     "@amatlash/vite-plugin-stylelint": "^1.2.0",
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
+    "@milahu/patch-package": "^6.4.11",
     "@types/loadable__component": "^5.13.4",
     "@types/node": "^17.0.29",
     "@types/object-assign": "^4.0.30",

@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-02 09:56:24
+ * @LastEditTime: 2022-05-02 10:04:26
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -94,7 +94,8 @@ export default defineConfig({
       'object-assign',
       // 间接依赖的声明语法，通过`>`分开, 如`a > b`表示 a 中依赖的 b
       '@loadable/component > hoist-non-react-statics',
-      '@loadable/component > react-is'
+      '@loadable/component > react-is',
+      'react-virtualized'
     ],
     exclude: ['@loadable/component']
   },
