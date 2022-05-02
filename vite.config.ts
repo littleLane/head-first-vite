@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-02 09:45:58
+ * @LastEditTime: 2022-05-02 09:56:24
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -91,8 +91,12 @@ export default defineConfig({
 
     include: [
       // 按需加载的依赖都可以声明到这个数组里
-      'object-assign'
-    ]
+      'object-assign',
+      // 间接依赖的声明语法，通过`>`分开, 如`a > b`表示 a 中依赖的 b
+      '@loadable/component > hoist-non-react-statics',
+      '@loadable/component > react-is'
+    ],
+    exclude: ['@loadable/component']
   },
   server: {
     port: 3000
