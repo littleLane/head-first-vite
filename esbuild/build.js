@@ -3,12 +3,13 @@
  * @Author: qianzhi
  * @Date: 2022-05-03 11:37:04
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-03 12:14:43
+ * @LastEditTime: 2022-05-03 12:34:07
  * @FilePath: /head-first-vite/esbuild/build.js
  */
 const { build } = require('esbuild');
 const envPlugin = require('./plugins/env-plugin');
 const httpImportPlugin = require('./plugins/http-import-plugin');
+const htmlPlugin = require('./plugins/html-plugin');
 
 async function runBuild() {
   // 异步方法，返回一个 Promise
@@ -44,7 +45,7 @@ async function runBuild() {
       '.png': 'base64',
       '.jsx': 'jsx'
     },
-    plugins: [envPlugin, httpImportPlugin()]
+    plugins: [envPlugin, httpImportPlugin(), htmlPlugin()]
   }).then(() => {
     console.log('🚀 Build Finished!');
   });

@@ -3,7 +3,7 @@
  * @Author: qianzhi
  * @Date: 2022-05-03 12:05:12
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-03 12:22:37
+ * @LastEditTime: 2022-05-03 12:27:35
  * @FilePath: /head-first-vite/esbuild/plugins/http-import-plugin.js
  */
 module.exports = () => ({
@@ -17,11 +17,14 @@ module.exports = () => ({
 
     // 拦截间接依赖的路径，并重写路径
     // tip: 间接依赖同样会被自动带上 `http-url`的 namespace
-    build.onResolve({ filter: /.*/, namespace: 'http-url' }, (args) => ({
-      // 重写路径
-      path: new URL(args.path, args.importer).toString(),
-      namespace: 'http-url'
-    }));
+    build.onResolve({ filter: /.*/, namespace: 'http-url' }, (args) => {
+      console.log('===> build.onResolve', args.path, args.importer);
+      return {
+        // 重写路径
+        path: new URL(args.path, args.importer).toString(),
+        namespace: 'http-url'
+      };
+    });
 
     // 2. 通过 fetch 请求加载 CDN 资源
     build.onLoad({ filter: /.*/, namespace: 'http-url' }, async (args) => {
