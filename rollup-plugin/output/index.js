@@ -13,7 +13,9 @@ const a = 1;
  * @Author: qianzhi
  * @Date: 2022-05-03 23:24:29
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-03 23:39:53
+ * @LastEditTime: 2022-05-03 23:51:45
  * @FilePath: /head-first-vite/rollup-plugin/src/index.js
  */
 console.log(a);
+// eslint-disable-next-line no-undef
+console.log(1);
