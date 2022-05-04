@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-05-04 09:25:13
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-04 09:49:41
+ * @LastEditTime: 2022-05-04 14:57:54
  * @FilePath: /head-first-vite/plugins/virtualModulePlugin.ts
  */
 import { Plugin, ResolvedConfig } from 'vite';
@@ -39,7 +39,7 @@ export function virtualModulePlugin(): Plugin {
       }
 
       if (id === resolvedEnvVirtualModuleId) {
-        return `export default ${JSON.stringify(config.env)}`;
+        return `export default ${JSON.stringify(config?.env ?? {})}`;
       }
     }
   };

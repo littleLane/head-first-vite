@@ -2,8 +2,12 @@
  * @Author: qianzhi
  * @Date: 2022-05-04 10:27:11
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-04 10:29:41
+ * @LastEditTime: 2022-05-04 14:58:42
  * @FilePath: /head-first-vite/plugins/testHooksPlugin.ts
+ */
+/**
+ * @type { import('vite').Plugin }
+ * @returns
  */
 export function testHooksPlugin() {
   return {
