@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-04 10:26:18
+ * @LastEditTime: 2022-05-04 10:30:38
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -23,6 +23,7 @@ import inspect from 'vite-plugin-inspect';
 
 import { esbuildPatchPlugin } from './plugins/esbuildPatchPlugin';
 import { virtualModulePlugin } from './plugins/virtualModulePlugin';
+import { testHooksPlugin } from './plugins/testHooksPlugin';
 
 // 全局的 scss 文件路径
 // 用 normalizePath 解决 window 下的路径问题
@@ -59,6 +60,7 @@ export default defineConfig({
     }
   },
   plugins: [
+    testHooksPlugin(),
     inspect(),
     esbuildPatchPlugin(),
     virtualModulePlugin(),
