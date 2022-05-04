@@ -2,13 +2,14 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-04 09:32:38
+ * @LastEditTime: 2022-05-04 09:44:24
  * @FilePath: /head-first-vite/src/main.tsx
  */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import fib from 'virtual:fib';
+import env from 'virtual:env';
 
 import 'virtual:windi.css';
 
@@ -16,6 +17,7 @@ import App from './pages/App';
 import './index.css';
 
 console.log('virtualFibModule', fib(10));
+console.log('virtualEnvModule', env);
 
 const importModule = (m: string) => import(`./locales/${m}.ts`);
 importModule('zh_CN');
