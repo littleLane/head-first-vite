@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-04 10:07:29
+ * @LastEditTime: 2022-05-04 10:26:18
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -14,9 +14,12 @@ import autoprefixer from 'autoprefixer';
 import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from '@amatlash/vite-plugin-stylelint';
 import windicss from 'vite-plugin-windicss';
+
 // import svgr from 'vite-plugin-svgr';
 import { svgrPlugin as svgr } from './plugins/svgrPlugin';
+
 import viteImagemin from 'vite-plugin-imagemin';
+import inspect from 'vite-plugin-inspect';
 
 import { esbuildPatchPlugin } from './plugins/esbuildPatchPlugin';
 import { virtualModulePlugin } from './plugins/virtualModulePlugin';
@@ -56,6 +59,7 @@ export default defineConfig({
     }
   },
   plugins: [
+    inspect(),
     esbuildPatchPlugin(),
     virtualModulePlugin(),
     viteStylelint({
