@@ -1,3 +1,10 @@
+<!--
+ * @Author: qianzhi
+ * @Date: 2022-05-04 15:44:40
+ * @LastEditors: qianzhi
+ * @LastEditTime: 2022-05-04 16:03:19
+ * @FilePath: /head-first-vite/vite-ssr/index.html
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +14,8 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="root"><!-- SSR_APP --></div>
+    <script type="module" src="/src/entry-client.tsx"></script>
+    <!-- SSR_DATA -->
   </body>
 </html>

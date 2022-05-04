@@ -1,8 +1,15 @@
+/*
+ * @Author: qianzhi
+ * @Date: 2022-05-04 15:44:40
+ * @LastEditors: qianzhi
+ * @LastEditTime: 2022-05-04 16:09:33
+ * @FilePath: /head-first-vite/vite-ssr/src/App.tsx
+ */
 import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props: any) {
   const [count, setCount] = useState(0);
 
   return (
