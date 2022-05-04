@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-04 10:30:38
+ * @LastEditTime: 2022-05-04 15:18:56
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -14,6 +14,7 @@ import autoprefixer from 'autoprefixer';
 import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from '@amatlash/vite-plugin-stylelint';
 import windicss from 'vite-plugin-windicss';
+import legacy from '@vitejs/plugin-legacy';
 
 // import svgr from 'vite-plugin-svgr';
 import { svgrPlugin as svgr } from './plugins/svgrPlugin';
@@ -93,6 +94,10 @@ export default defineConfig({
           }
         ]
       }
+    }),
+    legacy({
+      // 设置目标浏览器，browserslist 配置语法
+      targets: ['ie >= 11']
     })
   ],
   optimizeDeps: {
