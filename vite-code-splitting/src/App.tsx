@@ -1,4 +1,14 @@
+/*
+ * @Author: qianzhi
+ * @Date: 2022-05-04 13:32:34
+ * @LastEditors: qianzhi
+ * @LastEditTime: 2022-05-04 13:46:12
+ * @FilePath: /head-first-vite/vite-code-splitting/src/App.tsx
+ */
 import { useState } from 'react';
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -11,9 +21,9 @@ function App() {
         <img src={logo} className="app-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <Button type="primary" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
-          </button>
+          </Button>
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
