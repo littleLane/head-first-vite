@@ -2,7 +2,7 @@
  * @Author: qianzhi
  * @Date: 2022-04-22 23:35:58
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-04 09:32:03
+ * @LastEditTime: 2022-05-04 10:07:29
  * @FilePath: /head-first-vite/vite.config.ts
  */
 import path from 'path';
@@ -14,11 +14,12 @@ import autoprefixer from 'autoprefixer';
 import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from '@amatlash/vite-plugin-stylelint';
 import windicss from 'vite-plugin-windicss';
-import svgr from 'vite-plugin-svgr';
+// import svgr from 'vite-plugin-svgr';
+import { svgrPlugin as svgr } from './plugins/svgrPlugin';
 import viteImagemin from 'vite-plugin-imagemin';
 
 import { esbuildPatchPlugin } from './plugins/esbuildPatchPlugin';
-import { virtualFibModulePlugin } from './plugins/virtualFibModulePlugin';
+import { virtualModulePlugin } from './plugins/virtualModulePlugin';
 
 // 全局的 scss 文件路径
 // 用 normalizePath 解决 window 下的路径问题
@@ -56,7 +57,7 @@ export default defineConfig({
   },
   plugins: [
     esbuildPatchPlugin(),
-    virtualFibModulePlugin(),
+    virtualModulePlugin(),
     viteStylelint({
       // 对某些文件排除检查
       exclude: /windicss|node_modules/

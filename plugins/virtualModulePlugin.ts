@@ -2,8 +2,8 @@
  * @Author: qianzhi
  * @Date: 2022-05-04 09:25:13
  * @LastEditors: qianzhi
- * @LastEditTime: 2022-05-04 09:45:10
- * @FilePath: /head-first-vite/plugins/virtualFibModulePlugin.ts
+ * @LastEditTime: 2022-05-04 09:49:41
+ * @FilePath: /head-first-vite/plugins/virtualModulePlugin.ts
  */
 import { Plugin, ResolvedConfig } from 'vite';
 
@@ -16,11 +16,11 @@ const resolvedFibVirtualModuleId = '\0' + virtualFibModuleId;
 const virtualEnvModuleId = 'virtual:env';
 const resolvedEnvVirtualModuleId = '\0' + virtualEnvModuleId;
 
-export function virtualFibModulePlugin(): Plugin {
+export function virtualModulePlugin(): Plugin {
   let config: ResolvedConfig | null = null;
 
   return {
-    name: 'vite-plugin-virtual-fib-module',
+    name: 'vite-plugin-virtual-module',
     configResolved(c: ResolvedConfig) {
       config = c;
     },
